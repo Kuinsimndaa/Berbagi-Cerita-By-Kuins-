@@ -1,0 +1,9 @@
+// Jika aplikasi membutuhkan API key map service, tulis di sini.
+// Untuk Leaflet + OpenStreetMap, tidak perlu API key.
+// Untuk MapTiler, gunakan API key berikut:
+// MAPTILER_KEY=GetYourOwnKey
+// Ganti 'GetYourOwnKey' dengan API key MapTiler asli Anda jika ingin layer MapTiler aktif.
+// Daftar gratis di https://cloud.maptiler.com/ untuk mendapatkan API key.
+// Jika hanya menggunakan OpenStreetMap, baris ini bisa diabaikan.
+
+URL_DEPLOYMENT=https://github.com/Kuinsimndaa/pengembangan-web-intermediate.git
