@@ -18,7 +18,12 @@ async function subscribePushNotification() {
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
       });
-      // Kirim subscription ke server API jika perlu
+      // Kirim subscription ke server API
+      await fetch('https://story-api.dicoding.dev/v1/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(subscription)
+      });
       alert('Push notification diaktifkan!');
     } catch (err) {
       alert('Gagal subscribe push notification: ' + err.message);
