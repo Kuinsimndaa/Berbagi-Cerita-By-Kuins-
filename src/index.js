@@ -18,8 +18,8 @@ async function subscribePushNotification() {
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
       });
-      // Kirim subscription ke server API
-      await fetch('https://story-api.dicoding.dev/v1/subscribe', {
+      // Kirim subscription ke server lokal push notification
+      await fetch('http://localhost:3000/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(subscription)
