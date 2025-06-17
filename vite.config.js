@@ -68,6 +68,14 @@ export default defineConfig({
             }
           }
         ]
+      },
+      srcDir: 'src',
+      filename: 'custom-sw.js',
+      strategies: 'injectManifest',
+      injectRegister: 'auto',
+      devOptions: {
+        enabled: true,
+        type: 'module',
       }
     })
   ]

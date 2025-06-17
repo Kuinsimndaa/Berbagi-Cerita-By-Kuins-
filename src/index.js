@@ -57,9 +57,9 @@ window.saveStory = async (story) => {
   alert('Cerita disimpan untuk offline!');
 };
 
-// Daftarkan sw-push.js untuk push notification (hanya jika di production)
+// Daftarkan sw.js (hasil build PWA) untuk push notification & offline
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw-push.js').catch(() => {});
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
   });
 }
